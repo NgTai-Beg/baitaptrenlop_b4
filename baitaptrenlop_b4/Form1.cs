@@ -26,6 +26,7 @@ namespace baitaptrenlop_b4
             students.Add(new Student() { Id = 2, Name = "Nguyen Van B", Age = 22 });
             students.Add(new Student() { Id = 3, Name = "Nguyen Van c", Age = 30 });
             dtgSv.DataSource = students;
+            
         }
 
         private void dtgSv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -44,11 +45,39 @@ namespace baitaptrenlop_b4
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-          students.Add(new Student() {Id = int.Parse(txtId.Text),Name = txtName.Text,Age=int.Parse(txtAge.Text)});
-          dtgSv.DataSource = new BindingList<Student>(students);
-            txtId.Clear();
-            txtName.Clear();
-            txtAge.Clear();
+
+            
+                // Tạo sinh viên mới từ dữ liệu đầu vào
+                var newStudent = new Student()
+                {
+                    Id = int.Parse(txtId.Text),
+                    Name = txtName.Text,
+                    Age = int.Parse(txtAge.Text)
+                };
+
+                // Thêm sinh viên vào danh sách
+                students.Add(newStudent);
+
+                // Cập nhật lại DataGridView với BindingList để làm mới dữ liệu
+                dtgSv.DataSource = new BindingList<Student>(students);
+
+                // Lấy chỉ số của sinh viên vừa thêm (dòng)
+                int newRowIndex = students.Count - 1;
+
+                // Đảm bảo chỉ số dòng hợp lệ và cuộn đến dòng vừa thêm
+                if (newRowIndex >= 0)
+                {
+                    // Di chuyển con trỏ đến dòng mới thêm (chỉ cần dòng, cột đầu tiên)
+                    dtgSv.CurrentCell = dtgSv.Rows[newRowIndex].Cells[0];  // Cột 0 (ID)
+
+                    // Cuộn đến dòng vừa thêm
+                    dtgSv.FirstDisplayedScrollingRowIndex = newRowIndex;
+                }
+
+                // Hiển thị thông báo
+                MessageBox.Show("Đã thêm sinh viên mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+
         }
 
         private void btnDel_Click(object sender, EventArgs e)
