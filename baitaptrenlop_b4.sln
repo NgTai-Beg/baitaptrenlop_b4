@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baitaptrenlop_b4", "baitaptrenlop_b4\baitaptrenlop_b4.csproj", "{897647B5-ABFA-434D-8BCE-3E5AFE7061DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bt2", "bt2\bt2.csproj", "{2CAA8C89-8390-4903-8374-7934FACB09F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{897647B5-ABFA-434D-8BCE-3E5AFE7061DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{897647B5-ABFA-434D-8BCE-3E5AFE7061DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{897647B5-ABFA-434D-8BCE-3E5AFE7061DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CAA8C89-8390-4903-8374-7934FACB09F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CAA8C89-8390-4903-8374-7934FACB09F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CAA8C89-8390-4903-8374-7934FACB09F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CAA8C89-8390-4903-8374-7934FACB09F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
